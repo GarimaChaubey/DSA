@@ -39,7 +39,9 @@ class Solution {
         
         switch(choice)
         {
-            case 1: return pi*pow(arr[0],2);
+            case 1: return pi*arr[0]*arr[0]; 
+            //pi*pow(arr[0],2);
+                        //pi*arr[0]*arr[0];
                     break;
             case 2: return (arr[0]*arr[1]);
                     break;
