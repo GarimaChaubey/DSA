@@ -10,15 +10,13 @@ class Solution:
             if r < 0 or c < 0 or r >= m or c >= n or board[r][c] != 'O':
                 return
             
-            board[r][c] = 'T'  # mark safe
-            
-            # explore 4 directions
+            board[r][c] = 'T'  
+           
             dfs(r+1, c)
             dfs(r-1, c)
             dfs(r, c+1)
             dfs(r, c-1)
         
-        # Step 1: mark boundary connected O's
         for i in range(m):
             dfs(i, 0)
             dfs(i, n-1)
@@ -27,7 +25,6 @@ class Solution:
             dfs(0, j)
             dfs(m-1, j)
         
-        # Step 2: flip surrounded + restore safe
         for i in range(m):
             for j in range(n):
                 if board[i][j] == 'O':
