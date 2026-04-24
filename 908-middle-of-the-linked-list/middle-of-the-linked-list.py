@@ -7,12 +7,14 @@ class Solution(object):
     def middleNode(self, head):
         cnt=0
         temp=head
+
         while temp:
             temp=temp.next
             cnt+=1
 
-        middle_node=(cnt//2)
+        mid=cnt//2
         temp=head
-        for i in range(middle_node):
+        for i in range(mid):
             temp=temp.next
+        
         return temp
