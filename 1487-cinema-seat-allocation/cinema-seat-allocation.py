@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: int
         """
 
-        # Store reserved seats for only the rows that matter
         rows = {}
 
         for r, seat in reservedSeats:
@@ -14,7 +13,6 @@ class Solution(object):
                 rows[r] = set()
             rows[r].add(seat)
 
-        # Every row without reservations can accommodate 2 groups
         ans = (n - len(rows)) * 2
 
         for seats in rows.values():
