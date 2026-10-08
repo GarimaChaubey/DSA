@@ -7,7 +7,7 @@ class Solution(object):
                 if cnt > 0:
                     ans.append(ch)
                 cnt += 1
-            else:  # ')'
+            else:  
                 cnt -= 1
                 if cnt > 0:
                     ans.append(ch)
